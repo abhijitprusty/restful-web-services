@@ -2,10 +2,17 @@ package com.learn.cloud.restfulwebservices.beans;
 
 import java.util.Date;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
 public class User {
 
 	private Integer id;
+	
+	@Size(min = 2, message = "Name should be minimum of 2 chars")
 	private String name;
+	
+	@Past(message = "Present date not allowed")
 	private Date birthDate;
 
 	/**
