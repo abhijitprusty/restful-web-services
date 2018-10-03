@@ -28,6 +28,10 @@ public class UserResource {
 	@Autowired
 	private UserDaoService userDaoService;
 
+	/** For Content Negotiation
+	* For GET - need to set in header as 
+	* Accept = application/xml or application/json
+	* */
 	@GetMapping("/users/all")
 	public List<User> getAllUsers() {
 		return userDaoService.getAllUsers();
@@ -64,6 +68,7 @@ public class UserResource {
 		return resource;
 	}
 
+	
 
 	@PostMapping("/users/create")
 	public void create(@RequestBody User user) {
@@ -77,6 +82,12 @@ public class UserResource {
 	* 
 	* We need to implement the default validation API to provide details to end user. Check in CustomEntity
 	* Exception class
+	* 
+	* For Content Negotiation
+	* For Post - need to set in header as 
+	* Accept = application/xml or application/json
+	* Content-Type = application/xml or application/json
+	* 
 	**/
 	@PostMapping("/users")
 	public ResponseEntity save(@Valid @RequestBody User user) {
