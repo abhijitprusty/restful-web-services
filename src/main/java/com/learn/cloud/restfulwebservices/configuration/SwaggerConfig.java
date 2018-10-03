@@ -32,7 +32,7 @@ public class SwaggerConfig {
 		//this would provide default API doc implementation.
 		//return new Docket(DocumentationType.SWAGGER_2);
 		/**
-		 * IN order to improve the doc to have addtional information like
+		 * IN order to improve the doc to have additional information like
 		 * for 
 		 * 1. info section  - in /v2/api-docs we can add our custom information
 		 * 2. For the API say /users - we can tell in can consume and produce - xml and json.
