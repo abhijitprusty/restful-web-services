@@ -32,7 +32,7 @@ public class UserResource {
 	* For GET - need to set in header as 
 	* Accept = application/xml or application/json
 	* */
-	@GetMapping("/users/all")
+	@GetMapping(path = "/users/all")
 	public List<User> getAllUsers() {
 		return userDaoService.getAllUsers();
 	}
