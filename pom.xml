@@ -39,6 +39,7 @@
 		</dependency>
 		<!-- content negotiation , xml and json using jackson, dependency will be resolved by SB -->
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+		<!-- THis would help to accept json and xml as input and out with the help to accept in header for the request -->
 	<dependency>
 	    <groupId>com.fasterxml.jackson.dataformat</groupId>
 	    <artifactId>jackson-dataformat-xml</artifactId>
